@@ -6,6 +6,9 @@ namespace MioBotAPI
     {
         public static void Main(string[] args)
         {
+            //Á¬½ÓMioBot
+            Client.Connect();
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -26,8 +29,6 @@ namespace MioBotAPI
             app.UseAuthorization();
 
             app.MapControllers();
-
-            Client.Connect();
 
             app.Run();
         }
