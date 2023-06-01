@@ -32,10 +32,10 @@ namespace MioBotAPI.Controllers
             string qq = obj.Qq!;
             string group = obj.Group!;
             string str = msg + "|" + qq + "|" + group;
-            LogHelper.logger.Info("Accept {0}", str);
+            LogHelper.logger.Info("已接收数据：{0}", str);
             //发送数据
             Client.Send(str);
-            return Ok(str);
+            return Ok();
         }
     }
 }
